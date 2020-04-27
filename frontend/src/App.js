@@ -2,13 +2,29 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import UserCard from './Components/UserCard';
-import { Container } from 'reactstrap';
+import {
+  Container,
+  Navbar,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+} from 'reactstrap';
 
 function App() {
   return (
     <div className="App">
+      <Navbar color="light" light expand="md">
+        <NavbarBrand href="/">
+          <img src={logo} height="50" alt="logo"/>
+        </NavbarBrand>
+        <Nav className="mr-auto" navbar>
+          <NavItem>
+            <NavLink href="/">Home</NavLink>
+          </NavItem>
+        </Nav>
+      </Navbar>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Share what you use to learn!
         </p>
