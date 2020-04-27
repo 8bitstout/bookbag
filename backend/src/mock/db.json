@@ -5,5 +5,18 @@
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 }
   ],
-  "profile": { "name": "typicode" }
+  "profile": { "name": "typicode" },
+  "feed": [
+    { 
+      "user": "小马在纽约",
+      "action": "added HelloChinese to their book bag!",
+      "comment": "This app is great for learning Mandarin. Great UI and a variety of exercises",
+
+    },
+    {
+      "user": "Conor Murphy",
+      "action": "started learning Mandarin",
+      "comment": "I want to dedicate the year to learning Chinese and looking for other beginners to be accountable with!"
+    }
+  ]
 }
