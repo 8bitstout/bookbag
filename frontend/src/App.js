@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import UserCard from './Components/UserCard';
+import Feed from './Components/Feed';
 import {
   Container,
   Navbar,
@@ -39,7 +39,7 @@ function App() {
 
       </header>
       <Container>
-        <UserCard />
+        <Feed />
       </Container>
     </div>
   );
