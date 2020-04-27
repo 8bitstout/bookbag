@@ -1,15 +1,18 @@
 import React from 'react';
 import { Jumbotron } from 'reactstrap';
 
-function Feed(props) {
+function Feed({ data }) {
+  console.log(data);
   return (
     <div>
-      <Jumbotron>
-        <h3>小马在纽约 added HelloChineese to their bookbag!</h3>
-        <p className="lead">Pro youtuber</p>
-        <hr className="my-2" />
-        <p>Great app for learning Mandarin. Great UI, good vocab, good practices, and fun games.</p>
-      </Jumbotron>
+      {data !== undefined ? data.map((item, i) => (
+        <Jumbotron key={`${item.user}-${i}`}>
+          <h3>{item.user} {item.action}</h3>
+          <p className="lead">Pro youtuber</p>
+          <hr className="my-2" />
+          <p>{item.comment}</p>
+        </Jumbotron>
+      )) : <></>}
     </div>
   )
 }

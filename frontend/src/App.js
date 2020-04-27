@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Feed from './Components/Feed';
@@ -12,6 +12,20 @@ import {
 } from 'reactstrap';
 
 function App() {
+  const [feedData, setFeedData] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/feed')
+      .then(res => res.json())
+      .then(feedData => {
+        console.log(feedData);
+        setFeedData(feedData);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }, []);
+
   return (
     <div className="App">
       <Navbar color="light" light expand="md">
@@ -39,7 +53,7 @@ function App() {
 
       </header>
       <Container>
-        <Feed />
+        <Feed data={feedData} />
       </Container>
     </div>
   );
