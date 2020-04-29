@@ -9,6 +9,8 @@ import {
   Nav,
   NavItem,
   NavLink,
+  Row,
+  Col
 } from 'reactstrap';
 
 function App() {
@@ -42,18 +44,22 @@ function App() {
         <p>
           Share what you use to learn!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Bookbag.io
-        </a>
-
       </header>
       <Container>
-        <Feed data={feedData} />
+        <Row>
+          <Col>
+            <h1>Latest Questions</h1>
+            <Feed data={feedData}></Feed>
+          </Col>
+          <Col>
+            <h1>Latest Endeavours</h1>
+            <Feed data={feedData}></Feed>
+           </Col>
+          <Col>
+            <h1>Latest Book Bags</h1>
+            <Feed data={feedData}></Feed>
+          </Col>
+        </Row>
       </Container>
     </div>
   );
