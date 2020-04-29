@@ -6,16 +6,28 @@
     { "id": 1, "body": "some comment", "postId": 1 }
   ],
   "profile": { "name": "typicode" },
-  "feed": [
+  "resources": [
     { 
+      "id": 1,
       "user": "小马在纽约",
       "action": "added HelloChinese to their book bag!",
       "comment": "This app is great for learning Mandarin. Great UI and a variety of exercises"
-    },
+    }
+  ],
+  "tasks": [
     {
+      "id": 1,
       "user": "Conor Murphy",
       "action": "started learning Mandarin",
       "comment": "I want to dedicate the year to learning Chinese and looking for other beginners to be accountable with!"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "user": "Adam Smith",
+      "question": "What is the best way to being learning Economics?",
+      "tags": ["economics", "books", "videos"]
     }
   ]
 }
